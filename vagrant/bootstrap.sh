@@ -8,14 +8,16 @@ apt-get install -y build-essential unzip libdb-dev libleveldb-dev libsodium-dev 
 
 # install constellation
 CREL=constellation-0.2.0-ubuntu1604
-wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.2.0/$CREL.tar.xz
+#wget -q https://github.com/jpmorganchase/constellation/releases/download/v0.2.0/$CREL.tar.xz
+wget -q http://qa-wxtrust-jws.wancloud.io/$CREL.tar.xz
 tar xfJ $CREL.tar.xz
 cp $CREL/constellation-node /usr/local/bin && chmod 0755 /usr/local/bin/constellation-node
 rm -rf $CREL
 
 # install golang
 GOREL=go1.7.3.linux-amd64.tar.gz
-wget -q https://storage.googleapis.com/golang/$GOREL
+#wget -q https://storage.googleapis.com/golang/$GOREL
+wget -q http://qa-wxtrust-jws.wancloud.io/$GOREL
 tar xfz $GOREL
 mv go /usr/local/go
 rm -f $GOREL
@@ -33,6 +35,7 @@ popd >/dev/null
 
 # install Porosity
 wget -q https://github.com/jpmorganchase/quorum/releases/download/v1.2.0/porosity
+wget -q http://qa-wxtrust-jws.wancloud.io/porosity
 mv porosity /usr/local/bin && chmod 0755 /usr/local/bin/porosity
 
 # copy examples
