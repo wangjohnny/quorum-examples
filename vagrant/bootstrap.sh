@@ -34,7 +34,7 @@ cp build/bin/bootnode /usr/local/bin
 popd >/dev/null
 
 # install Porosity
-wget -q https://github.com/jpmorganchase/quorum/releases/download/v1.2.0/porosity
+#wget -q https://github.com/jpmorganchase/quorum/releases/download/v1.2.0/porosity
 wget -q http://qa-wxtrust-jws.wancloud.io/porosity
 mv porosity /usr/local/bin && chmod 0755 /usr/local/bin/porosity
 
